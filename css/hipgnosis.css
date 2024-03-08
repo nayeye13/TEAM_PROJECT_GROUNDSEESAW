@@ -1,0 +1,1449 @@
+@charset "utf-8";
+
+body {
+  background-color: #2f2c40;
+  width: 100%;
+}
+
+/* 폰트 */
+@font-face {
+  font-family: "Giants-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Giants-Inline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  /* #hipgnosis_wrap {
+    height: auto;
+    width: 100%;
+  } */
+  header {
+    width: 100%;
+    background: none;
+    position: absolute;
+  }
+  #logo {
+    width: 100%;
+    padding-left: 1%;
+  }
+  #logo img {
+    width: 200px;
+  }
+  #mainphoto {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
+  #mainphoto img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* 전시 타이틀 */
+  #s1_hipnogsis_title {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+  .text {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .text > h1 {
+    color: #96ccd9;
+    font-size: 55px;
+    font-family: "Giants-Inline";
+    font-weight: 700;
+  }
+  .text > p {
+    color: #96ccd9;
+    font-size: 17px;
+    font-weight: 700;
+    padding-bottom: 200px;
+  }
+
+  /* .maq {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+  } */
+  marquee {
+    font-size: 35px;
+    color: #96ccd9;
+    background-color: #c5f222;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding: 3%;
+    font-family: "Giants-Inline";
+  }
+  marquee:nth-of-type(1) {
+    color: #2f2c40;
+    background-color: #96ccd9;
+    transform: rotate(-2deg);
+  }
+  marquee:nth-of-type(2) {
+    color: #2f2c40;
+    background-color: #ff24f6;
+    transform: rotate(2deg);
+  }
+  marquee:nth-of-type(3) {
+    color: #2f2c40;
+    background-color: #f2ab27;
+    transform: rotate(-2deg);
+  }
+  marquee:nth-of-type(4) {
+    color: #2f2c40;
+    background-color: #c5f222;
+    transform: rotate(2deg);
+  }
+
+  /* 마퀴이벤트 */
+  /* .maqee{width: 100vw; margin-bottom: 12vw; display: flex;
+            font-family: 'Giants-Inline';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal; }
+          .maqee:nth-child(2){margin-top: 30vh; transform: rotate(-2deg);background-color: #FF24F6;}
+          .maqee:nth-child(3){ transform: rotate(2deg);background-color: #F2AB27;justify-content: flex-end;}
+          .maqee:nth-child(4){ transform: rotate(-2deg);background-color: #5800ff;}
+          .maqee:nth-child(5){ transform: rotate(2deg);background-color: #C5F222; 
+         justify-content: flex-end; margin-bottom: 10px;}
+         .maqee>p{display: flex; padding: 4vh 0; font-size: 15px;} */
+
+  /* 힙노시스 소개란 */
+  #s2_hipnogsis_about {
+    width: 100%;
+    height: auto;
+    background-color: #f2ab27;
+    border-radius: 20px;
+    padding: 3%;
+    overflow: hidden;
+  }
+  #s2_hipnogsis_about > h1 {
+    color: #2f2c40;
+    font-size: 70px;
+    font-weight: 800;
+    font-family: "Giants-Inline";
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  /* 레코드 */
+  #record {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .album {
+    width: 100%;
+    height: auto;
+  }
+  .album img {
+    height: 300px;
+    position: absolute;
+    order: 1;
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+    }
+  }
+
+  .lp {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .lp img {
+    width: 280px;
+    height: auto;
+    -webkit-animation: rotate-in-center 8s linear infinite;
+    animation: rotate-in-center 8s linear infinite;
+    animation-name: lp;
+  }
+
+  @-webkit-keyframes lp {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes lp {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .about {
+    padding: 5%;
+    text-align: center;
+  }
+  .about > p {
+    color: #2f2c40;
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 150px;
+  }
+
+  /* 전시 뷰포인트 */
+  #s3_hipnogsis_viewpoint {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 50px;
+  }
+  .viewp {
+    padding: 5%;
+  }
+  .viewp > h1 {
+    color: #c5f222;
+    font-size: 70px;
+    font-family: "Giants-Inline";
+    text-align: center;
+  }
+  .vp1 > h2 {
+    color: #96ccd9;
+    font-size: 20px;
+  }
+  .vp1 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .vp2 > h2 {
+    color: #f2ab27;
+    font-size: 20px;
+  }
+  .vp2 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .vp3 > h2 {
+    color: #ff24f6;
+    font-size: 20px;
+  }
+  .vp3 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  #pic_1 {
+    width: 100%;
+    padding: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #pic_1 img {
+    width: 100%;
+  }
+  #pic_1 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+  #pic_2 {
+    width: 100%;
+    padding: 2%;
+    padding-bottom: 20px;
+  }
+  #pic_2 img {
+    width: 100%;
+  }
+  #pic_2 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+  #pic_3 {
+    width: 100%;
+    padding: 2%;
+    padding-bottom: 20px;
+  }
+  #pic_3 img {
+    width: 100%;
+  }
+  #pic_3 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+
+  /* 전시 프리뷰 */
+  #s4_hipnogsis_preview {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  #s4_hipnogsis_preview h1 {
+    color: #f2f2f2;
+    font-size: 70px;
+    text-align: center;
+    font-family: "Giants-Inline";
+    margin-bottom: 50px;
+  }
+  .slide_preview {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 4%;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .slide {
+    width: 300%;
+    height: auto;
+  }
+  .slide ul {
+    overflow: hidden;
+  }
+  .slide li {
+    width: 33%;
+    float: left;
+    height: auto;
+    padding: 3%;
+    margin: 0 auto;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* .slide span{ top: 50%;  transform: translateY(-50%);} */
+
+  span {
+    color: #f2f2f2;
+    cursor: pointer;
+    line-height: 50px;
+  }
+  .next {
+    width: 8%;
+    height: 50px;
+    bottom: 0;
+    right: 3%;
+    position: absolute;
+    top: 43%;
+  }
+  .prev {
+    width: 8%;
+    height: 50px;
+    bottom: 0;
+    left: 3%;
+    position: absolute;
+    top: 43%;
+  }
+  .next img {
+    width: 100%;
+  }
+  .prev img {
+    width: 100%;
+  }
+
+  /* background-position: center;
+        background-size: cover; */
+  /* .card1 h2{font-size: 27px; text-align: center; padding-top: 50px;}
+          .card1 p{font-size: 18px;font-weight: 600; padding: 20px; text-align: center; padding-bottom: 90px;} */
+
+  /* 티켓정보
+         #s5_hipnogsis_tiket{width: 100%; height: auto; background-color: #5D768C;}
+         #s5_hipnogsis_tiket h1{color: #ffffeb;font-size: 70px; text-align: center;font-family: 'Giants-Inline';margin-bottom: 50px; padding-top: 30px;}
+
+         .tiket{width: 100%; padding: 5%; padding-top: 40px;padding-bottom: 90px;}
+         .tiket img{width: 100%; height: auto;}
+
+         .llien{width: 95%; height: auto; margin: 0 auto; 
+          border-top: 3px solid #ffffeb;}
+         #s5_hipnogsis_tiket p{color: #ffffeb; padding-left: 15px;
+        padding-top: 10px; padding-bottom: 100px; font-weight: 700;}
+        
+
+         #s6_hipnogsis_notice{width: 100%; height: 1410px; } */
+
+  /* 티켓 */
+  #ticket {
+    width: 100%;
+    height: auto;
+    background-color: #5d768c;
+    display: flex;
+    justify-content: center;
+  }
+  #ticket > .ticketbox {
+    width: 1020px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  .tctext {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .tctext > h1 {
+    width: 210px;
+    height: 70px;
+    font-size: 50px;
+    border-bottom: #ffffeb 4px solid;
+    color: #ffffeb;
+    text-align: center;
+    font-family: "Giants-Inline";
+  }
+
+  .ticketbox > .tcbox {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tcbox img {
+    width: 90%;
+  }
+
+  .tcinfo {
+    width: 100%;
+    height: 205px;
+    border-top: 3px solid #ffffeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tcinfo p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 38px;
+    color: #ffffeb;
+  }
+
+  /* 전시 정보 */
+  #exinfo {
+    width: 100%;
+    height: 1500px;
+    display: flex;
+    justify-content: center;
+    background-color: #2f2c40;
+  }
+  .exinfobox {
+    width: 1024px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-content: center;
+    margin-top: 100px;
+  }
+  .exinfobox img {
+    width: 100%;
+  }
+
+  .exinfo1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .exinfo1 img {
+    width: 90%;
+  }
+
+  .exinfo2 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .exinfo2 p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    height: 250px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffeb;
+    text-align: center;
+  }
+
+  .exinfo3 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-content: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    display: flex;
+  }
+  .maptext {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffeb;
+    line-height: 40px;
+    text-align: center;
+    width: 80%;
+    height: 100px;
+  }
+  .map {
+    width: 90%;
+    height: 400px;
+    border-radius: 2%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1399px) {
+  header {
+    width: 100%;
+    background: none;
+    position: absolute;
+  }
+  #logo {
+    width: 100%;
+    padding-left: 1%;
+  }
+  #logo img {
+    width: 230px;
+  }
+  #mainphoto {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
+  #mainphoto img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* 전시 타이틀 */
+  #s1_hipnogsis_title {
+    height: auto;
+    width: 100%;
+  }
+  .text {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .text > h1 {
+    color: #96ccd9;
+    font-size: 70px;
+    font-family: "Giants-Inline";
+    font-weight: 700;
+  }
+  .text > p {
+    color: #96ccd9;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 200px;
+  }
+
+  /* .maq {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+  } */
+  marquee {
+    font-size: 38px;
+    color: #96ccd9;
+    background-color: #c5f222;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding: 2%;
+    font-family: "Giants-Inline";
+  }
+  marquee:nth-of-type(1) {
+    color: #2f2c40;
+    background-color: #96ccd9;
+    transform: rotate(-2deg);
+  }
+  marquee:nth-of-type(2) {
+    color: #2f2c40;
+    background-color: #ff24f6;
+    transform: rotate(2deg);
+  }
+  marquee:nth-of-type(3) {
+    color: #2f2c40;
+    background-color: #f2ab27;
+    transform: rotate(-2deg);
+  }
+  marquee:nth-of-type(4) {
+    color: #2f2c40;
+    background-color: #c5f222;
+    transform: rotate(2deg);
+    margin-bottom: 100px;
+  }
+
+  /* 마퀴이벤트 */
+  /* .maqee{width: 100vw; margin-bottom: 6vw; display: flex;}
+          .maqee:nth-child(2){margin-top: 15vw; transform: rotate(-2deg);background-color: #ff3796;}
+          .maqee:nth-child(3){ transform: rotate(2deg);background-color: #ecfe04;justify-content: flex-end;}
+          .maqee:nth-child(4){ transform: rotate(-2deg);background-color: #5800ff;}
+          .maqee:nth-child(5){ transform: rotate(2deg);background-color: #33ff33; 
+         justify-content: flex-end; margin-bottom: 100vh;}
+         .maqee>p{display: flex; padding: 4vh 0; font-size: clamp(2vw, 8vw,5rem); } */
+
+  /* 힙노시스 소개란 */
+  #s2_hipnogsis_about {
+    width: 100%;
+    height: 1429px;
+    background-color: #f2ab27;
+    overflow: hidden;
+  }
+  #s2_hipnogsis_about > h1 {
+    color: #2f2c40;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: "Giants-Inline";
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  /* 레코드 */
+  .record {
+    display: flex;
+    padding-top: 30px;
+  }
+  .album {
+    width: 100%;
+    position: absolute;
+    padding-top: 50px;
+  }
+  .album img {
+    height: 500px;
+    order: 1;
+    padding-left: 5%;
+  }
+
+  .lp {
+    width: 100%;
+    padding-top: 80px;
+    box-sizing: border-box;
+    padding-left: 50%;
+  }
+  .lp img {
+    width: 450px;
+    -webkit-animation: rotate-in-center 8s linear infinite;
+    animation: rotate-in-center 8s linear infinite;
+    animation-name: lp;
+  }
+  @-webkit-keyframes lp {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes lp {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .about {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .about > p {
+    color: #2f2c40;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* 전시 뷰포인트 */
+  #s3_hipnogsis_viewpoint {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  .viewp {
+    text-align: center;
+  }
+  .viewp > h1 {
+    color: #c5f222;
+    font-size: 70px;
+    font-family: "Giants-Inline";
+  }
+  .vp1 > h2 {
+    color: #96ccd9;
+    font-size: 20px;
+  }
+  .vp1 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+  }
+  .vp2 > h2 {
+    color: #f2ab27;
+    font-size: 20px;
+  }
+  .vp2 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+  }
+  .vp3 > h2 {
+    color: #ff24f6;
+    font-size: 20px;
+  }
+  .vp3 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+  }
+
+  #pic_1 {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #pic_1 img {
+    width: 100%;
+  }
+  #pic_1 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+  #pic_2 {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 20px;
+  }
+  #pic_2 img {
+    width: 100%;
+  }
+  #pic_2 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+  #pic_3 {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 20px;
+  }
+  #pic_3 img {
+    width: 100%;
+  }
+  #pic_3 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+
+  /* 전시 프리뷰 */
+  #s4_hipnogsis_preview {
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  #s4_hipnogsis_preview h1 {
+    color: #f2f2f2;
+    font-size: 70px;
+    text-align: center;
+    font-family: "Giants-Inline";
+    margin-bottom: 30px;
+  }
+
+  .slide_preview {
+    width: 100%;
+    padding: 4%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  /* .swiper_card{width: 100%; padding-top: 50px; padding-bottom: 50px;} */
+  .slide {
+    width: 300%;
+    height: auto;
+    overflow: hidden;
+  }
+  .slide li {
+    width: 33%;
+    float: left;
+    object-fit: cover;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin: 0 auto;
+  }
+  .slide img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  span {
+    color: #f2f2f2;
+    cursor: pointer;
+  }
+
+  .next {
+    position: absolute;
+    width: 4%;
+    bottom: 3%;
+    right: 13%;
+    top: 42%;
+  }
+  .prev {
+    position: absolute;
+    width: 4%;
+    bottom: 3%;
+    left: 13%;
+    top: 42%;
+  }
+  .next img {
+    width: 100%;
+  }
+  .prev img {
+    width: 100%;
+  }
+
+  /* 
+        티켓정보
+         #s5_hipnogsis_tiket{width: 100%; height: 1064px; background-color: #5D768C;}
+         #s5_hipnogsis_tiket h1{color: #ffffeb;font-size: 70px; text-align: center;font-family: 'Giants-Inline';margin-bottom: 50px; padding-top: 30px;}
+
+         .tiket{width: 100%; padding: 5%; padding-top: 40px;padding-bottom: 90px;}
+         .tiket img{width: 100%; height: auto;}
+
+         .llien{width: 95%; height: auto; margin: 0 auto; 
+          border-top: 3px solid #ffffeb;}
+         #s5_hipnogsis_tiket p{color: #ffffeb; padding-left: 15px;
+        padding-top: 10px; padding-bottom: 100px;}
+
+
+         #s6_hipnogsis_notice{width: 100%; height: 1410px; } */
+
+  /* 티켓 */
+  #ticket {
+    width: 100%;
+    height: 1024px;
+    background-color: #5d768c;
+    display: flex;
+    justify-content: center;
+  }
+  #ticket > .ticketbox {
+    width: 1020px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  .tctext {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .tctext > h1 {
+    width: 220px;
+    height: 80px;
+    font-size: 60px;
+    border-bottom: #ffffeb 4px solid;
+    color: #ffffeb;
+    text-align: center;
+    font-family: "Giants-Inline";
+  }
+
+  .ticketbox > .tcbox {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tcbox img {
+    width: 80%;
+  }
+
+  .tcinfo {
+    width: 100%;
+    height: 205px;
+    border-top: 3px solid #ffffeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tcinfo p {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 38px;
+    color: #ffffeb;
+  }
+
+  /* 전시 정보 */
+  #exinfo {
+    width: 100%;
+    height: 1700px;
+    display: flex;
+    justify-content: center;
+    background-color: #2f2c40;
+  }
+  .exinfobox {
+    width: 1024px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-content: center;
+  }
+  .exinfobox img {
+    width: 100%;
+  }
+
+  .exinfo1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .exinfo1 img {
+    width: 80%;
+  }
+
+  .exinfo2 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .exinfo2 p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffeb;
+    text-align: center;
+  }
+
+  .exinfo3 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-content: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    display: flex;
+  }
+  .maptext {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffeb;
+    line-height: 40px;
+    text-align: center;
+    width: 80%;
+    height: 100px;
+  }
+  .map {
+    width: 80%;
+    height: 400px;
+    border-radius: 2%;
+  }
+}
+
+@media (min-width: 1400px) {
+  header {
+    width: 100%;
+    background: none;
+    position: absolute;
+  }
+  #logo {
+    width: 100%;
+    padding-left: 1%;
+  }
+  #logo img {
+    width: 250px;
+  }
+  #mainphoto {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
+  #mainphoto img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* 전시 타이틀 */
+  #s1_hipnogsis_title {
+    height: auto;
+    width: 100%;
+  }
+  .text {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .text > h1 {
+    color: #96ccd9;
+    font-size: 80px;
+    font-family: "Giants-Inline";
+  }
+  .text > p {
+    color: #96ccd9;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 200px;
+  }
+
+  /* .maq {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+  } */
+  marquee {
+    font-size: 30px;
+    color: #96ccd9;
+    background-color: #c5f222;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding: 1%;
+    font-family: "Giants-Inline";
+  }
+  marquee:nth-of-type(1) {
+    color: #2f2c40;
+    background-color: #96ccd9;
+    transform: rotate(-1deg);
+  }
+  marquee:nth-of-type(2) {
+    color: #2f2c40;
+    background-color: #ff24f6;
+    transform: rotate(1deg);
+  }
+  marquee:nth-of-type(3) {
+    color: #2f2c40;
+    background-color: #f2ab27;
+    transform: rotate(-1deg);
+  }
+  marquee:nth-of-type(4) {
+    color: #2f2c40;
+    background-color: #c5f222;
+    transform: rotate(1deg);
+    margin-bottom: 80px;
+  }
+
+  /* 마퀴이벤트 */
+  /* .maqee{width: 100vw; margin-bottom: 6vw; display: flex;}
+         .maqee:nth-child(2){margin-top: 25vh; transform: rotate(-2deg);background-color: #ff3796;}
+         .maqee:nth-child(3){ transform: rotate(2deg);background-color: #ecfe04;justify-content: flex-end;}
+         .maqee:nth-child(4){ transform: rotate(-2deg);background-color: #5800ff;}
+         .maqee:nth-child(5){ transform: rotate(2deg);background-color: #33ff33; 
+        justify-content: flex-end; margin-bottom: 100vh;}
+        .maqee>p{display: flex; padding: 5vh 0; font-size: clamp(2vw, 8vw,5rem);} */
+
+  /* 힙노시스 소개란 */
+  #s2_hipnogsis_about {
+    width: 100%;
+    height: auto;
+    background-color: #f2ab27;
+    padding-bottom: 150px;
+  }
+
+  #s2_hipnogsis_about > h1 {
+    color: #2f2c40;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: "Giants-Inline";
+    padding-top: 130px;
+    text-align: center;
+  }
+
+  /* 레코드 */
+  .record {
+    display: flex;
+  }
+  .album {
+    width: 100%;
+    padding-left: 30%;
+    padding-top: 2%;
+  }
+  .album img {
+    width: 500px;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .lp {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 20%;
+  }
+  .lp img {
+    width: 450px;
+    -webkit-animation: rotate-in-center 8s linear infinite;
+    animation: rotate-in-center 8s linear infinite;
+    animation-name: lp;
+  }
+  @-webkit-keyframes lp {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes lp {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .about {
+    text-align: center;
+    padding-top: 50px;
+  }
+  .about > p {
+    color: #2f2c40;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* 전시 뷰포인트 */
+  #s3_hipnogsis_viewpoint {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    padding-top: 150px;
+  }
+  .viewp {
+    text-align: center;
+  }
+  .viewp > h1 {
+    color: #c5f222;
+    font-size: 70px;
+    font-family: "Giants-Inline";
+  }
+  .vp1 > h2 {
+    color: #96ccd9;
+    font-size: 20px;
+  }
+  .vp1 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+  }
+  .vp2 > h2 {
+    color: #f2ab27;
+    font-size: 20px;
+  }
+  .vp2 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+  }
+  .vp3 > h2 {
+    color: #ff24f6;
+    font-size: 20px;
+  }
+  .vp3 > p {
+    color: #f2f2f2;
+    font-size: 15px;
+  }
+
+  #pic_1 {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #pic_1 img {
+    width: 50%;
+  }
+  #pic_1 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+  #pic_2 {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 20px;
+  }
+  #pic_2 img {
+    width: 50%;
+  }
+  #pic_2 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+  #pic_3 {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 20px;
+  }
+  #pic_3 img {
+    width: 50%;
+  }
+  #pic_3 p {
+    color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+
+  /* 전시 프리뷰 */
+  #s4_hipnogsis_preview {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+    padding-top: 40px;
+  }
+  #s4_hipnogsis_preview h1 {
+    color: #f2f2f2;
+    font-size: 70px;
+    text-align: center;
+    font-family: "Giants-Inline";
+    margin-bottom: 50px;
+  }
+
+  .slide_preview {
+    width: 1200px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 5px auto;
+  }
+  .slide {
+    width: 3600px;
+    height: auto;
+  }
+  .slide li {
+    width: 1200px;
+    float: left;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 0 auto;
+  }
+  .slide img {
+    width: 100%;
+    object-fit: cover;
+    user-select: none;
+  }
+
+  .slide span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  span {
+    color: #f2f2f2;
+    font-size: 80px;
+    cursor: pointer;
+  }
+
+  .next {
+    width: 5%;
+    height: 50px;
+    top: 42%;
+    right: 0;
+    position: absolute;
+  }
+  .prev {
+    width: 5%;
+    height: 50px;
+    top: 42%;
+    left: 0;
+    position: absolute;
+  }
+  .next img {
+    width: 100%;
+  }
+  .prev img {
+    width: 100%;
+  }
+
+  /* 티켓정보
+         #s5_hipnogsis_tiket{width: 100%; height: 1064px; background-color: #5D768C;}
+         #s5_hipnogsis_tiket h1{color: #a28973;font-size: 70px; text-align: center;font-family: 'Giants-Inline';margin-bottom: 50px; padding-top: 30px;}
+
+         .tiket{width: 100%; padding: 30%; padding-top: 40px;padding-bottom: 90px;}
+         .tiket img{width: 100%; height: auto;}
+
+         .llien{width: 90%; height: auto; margin: 0 auto; 
+          border-top: 3px solid #ffffeb;}
+         #s5_hipnogsis_tiket p{color: #ffffeb; padding-left: 5%;
+        padding-top: 10px; padding-bottom: 100px; font-weight: 700;}
+
+
+         #s6_hipnogsis_notice{width: 100%; height: 1410px; } */
+  /* 티켓 */
+  #ticket {
+    width: 100%;
+    height: 1024px;
+    background-color: #5d768c;
+    display: flex;
+    justify-content: center;
+  }
+  #ticket > .ticketbox {
+    width: 1020px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  .tctext {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .tctext > h1 {
+    width: 250px;
+    height: 90px;
+    font-size: 70px;
+    border-bottom: #ffffeb 4px solid;
+    color: #ffffeb;
+    text-align: center;
+    font-family: "Giants-Inline";
+  }
+
+  .tcbox img {
+    width: 80%;
+  }
+
+  .ticketbox > .tcbox {
+    width: 100%;
+    height: 519px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tcinfo {
+    width: 100%;
+    height: 205px;
+    border-top: 3px solid #ffffeb;
+    display: flex;
+    align-items: center;
+  }
+  .tcinfo p {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 38px;
+    color: #ffffeb;
+  }
+
+  /* 전시 정보 */
+  #exinfo {
+    width: 100%;
+    height: 1330px;
+    display: flex;
+    justify-content: center;
+    background-color: #2f2c40;
+    margin-top: 150px;
+  }
+  .exinfobox {
+    width: 1024px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+  .exinfobox img {
+    width: 100%;
+  }
+
+  .exinfo1 {
+    width: 100%;
+    height: auto;
+    padding: 1%;
+  }
+
+  .exinfo2 {
+    width: 48%;
+    height: 471px;
+  }
+  .exinfo2 p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+    height: 235px;
+    display: flex;
+    align-items: center;
+    color: #ffffeb;
+  }
+
+  .exinfo3 {
+    width: 48%;
+    height: 471px;
+    display: flex;
+    align-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  .maptext {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffeb;
+    line-height: 40px;
+  }
+  .map {
+    width: 100%;
+    height: 320px;
+    border-radius: 2%;
+  }
+}

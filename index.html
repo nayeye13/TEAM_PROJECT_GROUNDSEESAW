@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div id="menu">
+            <div class="bar1">
+                <p>Exhibitions</p>
+                <p>Visit</p>
+                <p>Shop</p>
+            </div>
+
+            <div class="bar2">
+              <img src="img/logo/logo_b.png" alt="">  
+            </div>
+            
+            <div class="bar3">
+                <p>About</p>
+                <p>Login</p>
+                <p><span>EN</span></p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- /메인페이지 -->
+    
+<div id="mainp">
+    <div id="slidewrap">
+        <ul class="slide">
+            <li class="s1">
+                <a href="hipgnosis.html">
+                <div class="bgbox">
+                    <p class="bginfo">Seochon</p>
+                    <p class="bginfo2">24.03.08(금) ~ <br>
+                        24.08.31(토)</p>
+                    <p class="bginfo3">Ticket&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</p>
+                    <p class="title">힙노시스: 롱 플레잉 스토리</p>
+                </div>
+                
+                    <img src="img/main/hipgnosis.jpg" alt="">
+                   
+                </a>
+            </li>
+
+            <li class="s2">
+                <a href="mundomendo.html">
+                <div class="bgbox">
+                    <p class="bginfo">Seochon</p>
+                    <p class="bginfo2">23.06.30(금) ~ <br>
+                        23.12.03(일)</p>
+                    <p class="bginfo3">Ticket&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</p>
+                    <p class="title">문도멘도: 판타스틱 
+                        시티 라이프</p>
+                </div>
+                
+                    <img src="img/main/mundomendomain.png" alt="">
+                    
+                </a>
+            </li>
+
+            <li class="s3">
+                <a href="Alice_into_the__newworld.html">
+                <div class="bgbox">
+                    <p class="bginfo">Myeongdong</p>
+                    <p class="bginfo2">23.01.10(수) ~ <br>
+                        OPEN RUN</p>
+                    <p class="bginfo3">Ticket&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</p>
+                    <p class="title">앨리스: 인투 더 
+                         뉴월드</p>
+                </div>
+                
+                    <img src="img/main/alice.jpg" alt="">
+                    
+                </a>
+            </li>
+
+            <li class="s4">
+                <a href="hipgnosis.html">
+                <div class="bgbox">
+                    <p class="bginfo">Seochon</p>
+                    <p class="bginfo2">24.03.08(금) ~ <br>
+                        24.08.31(토)</p>
+                        <p class="bginfo3">Ticket&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</p>
+                        <p class="title">힙노시스: 롱 플레잉 스토리</p>
+                </div>
+                
+                    <img src="img/main/hipgnosis.jpg" alt="">
+                    
+                </a>
+            </li>
+
+            <li class="s5">
+                <a href="mundomendo.html">
+                <div class="bgbox">
+                    <p class="bginfo">Seochon</p>
+                    <p class="bginfo2">23.06.30(금) ~ <br>
+                        23.12.03(일)</p>
+                        <p class="bginfo3">Ticket&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</p>
+                        <p class="title">문도멘도: 판타스틱
+                        시티 라이프</p>
+                </div>
+                
+                    <img src="img/main/mundomendomain.png" alt="">
+                    
+                </a>
+            </li>
+
+            <li class="s6">
+                <a href="Alice_into_the__newworld.html">
+                <div class="bgbox">
+                    <p class="bginfo">Myeongdong</p>
+                    <p class="bginfo2">23.01.10(수) ~ <br>
+                        OPEN RUN</p>
+                    <p class="bginfo3">Ticket&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</p>
+                    <p class="title">앨리스: 인투 더 뉴월드</p>
+                </div>
+                
+                    <img src="img/main/alice.jpg" alt="">
+                    
+                </a>
+            </li>
+        </ul>
+
+        <div class="prev">←</div>
+        <div class="next">→</div>
+</div>
+</div>
+    
+
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="foo1">
+            <p>(주)미디어앤아트 <br>
+                사업자등록번호. 261-81-07403 <br>
+                대표자. 지성욱 <br>
+                통신판매업신고. 2020-서울성동-01049
+            </p>
+        </div>
+
+        <div class="foo2"> 
+            <p>Customer Center. <br>
+                T. 1522 - 1796 (10:00 - 19:00 / 점심시간 12:30 - 13:30) <br>
+                E. groundseesaw@mnart.co.kr</p>
+        </div>
+
+        <div class="foo3">
+            <div class="fbox"><p>이용약관</p></div>
+            <div class="fbox"><p>개인정보 처리방침</p></div>
+            <div class="fbox"><p>배송/교환/환불 정책</p></div>
+            <div class="fbox"><p>대관안내</p></div>
+
+            <p>© 2022 BY GROUNDSEESAW ALL RIGHTS RESERVED.</p>
+
+        </div>
+    </footer>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script>
+
+
+        if (window.matchMedia("(max-width:768px)").matches) { 
+
+            $('.prev').click(function(){
+            $('.slide li:last').prependTo('.slide');
+            $('.slide').css('margin-left','-100%');
+            $('.slide').stop().animate({marginLeft:0},500);
+        
+        })
+
+        $('.next').click(function(){
+            $('.slide').stop().animate({marginLeft: '-100%'},500, function(){
+                $('.slide li:first').appendTo('.slide');
+                $('.slide').css({marginLeft:0});
+            });
+        });  
+
+        } else if (window.matchMedia("(min-width : 769px) and (max-width : 1399px)").matches){ 
+
+            $('.prev').click(function(){
+            $('.slide li:last').prependTo('.slide');
+            $('.slide').css('margin-left','-50%');
+            $('.slide').stop().animate({marginLeft:0},300);
+        
+        })
+
+        $('.next').click(function(){
+            $('.slide').stop().animate({marginLeft: '-50%'},400, function(){
+                $('.slide li:first').appendTo('.slide');
+                $('.slide').css({marginLeft:0});
+            });
+        });  
+
+        }else{
+            $('.prev').click(function(){
+            $('.slide li:last').prependTo('.slide');
+            $('.slide').css('margin-left','-33.33%');
+            $('.slide').stop().animate({marginLeft:0},400);
+        
+        })
+
+        $('.next').click(function(){
+            $('.slide').stop().animate({marginLeft: '-33.33%'},300, function(){
+                $('.slide li:first').appendTo('.slide');
+                $('.slide').css({marginLeft:0});
+            });
+        });  
+        }
+
+
+        // 호버
+        
+        if (window.matchMedia("(max-width: 768px)").matches) { 
+            $('.slide li a').hover(function(){
+                $(this).children('.bgbox')
+            })
+         
+
+        } else if (window.matchMedia("(min-width : 769px)").matches) { 
+        $('.slide li a').hover(function(){
+                $(this).children('.bgbox').show();
+            }, function(){
+                $(this).children('.bgbox').hide();
+            });
+        }
+
+       
+
+    </script>
+
+</body>
+</html>
